@@ -228,6 +228,13 @@
         "DELETE"
       ]
     },
+    "bank.balancehistories": {
+      "description": "Read the balances your bank reported over time",
+      "type": "io.cozy.bank.balancehistories",
+      "verbs": [
+        "GET"
+      ]
+    },
     "bills": {
       "description": "Manage bills",
       "type": "io.cozy.bills",
