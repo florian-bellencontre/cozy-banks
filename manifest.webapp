@@ -63,6 +63,12 @@
       "trigger": "@event io.cozy.bills:CREATED",
       "debounce": "75s"
     },
+    "onOperationOrBillCreateDaily": {
+      "type": "node",
+      "file": "services/onOperationOrBillCreate/banks.js",
+      "trigger": "@cron 0 20 3 * * *",
+      "comment": "The same bundle as onOperationOrBillCreate, on a daily cron, so that the features it carries no longer wait for a bill to arrive. A manifest service holds exactly one trigger, hence the second declaration. See https://github.com/cozy/cozy-banks/blob/master/docs/services.md#a-daily-safety-net for why, and why 03:20."
+    },
     "categorization": {
       "type": "node",
       "file": "services/categorization/banks.js",
